@@ -1,10 +1,10 @@
 export const firebaseConfig = {
-  apiKey: "AIzaSyBbdf8mL-BZans90c0OtzCYaqiKnHbvWoM",
-  authDomain: "ganatrade-beta.firebaseapp.com",
-  databaseURL: "https://ganatrade-beta.firebaseio.com",
-  projectId: "ganatrade-beta",
-  storageBucket: "ganatrade-beta.appspot.com",
-  messagingSenderId: "782008170853",
-  appId: "1:782008170853:web:2f2be7b313eab82e7ec98c"
-};
+    apiKey: "AIzaSyA179WMS9Q1RgHekGdkcI35U0qctbTJslo",
+    authDomain: "braquage-royale.firebaseapp.com",
+    projectId: "braquage-royale",
+    storageBucket: "braquage-royale.appspot.com",
+    messagingSenderId: "30935066556",
+    appId: "1:30935066556:web:db5bc9a34f22d100b5adb9",
+    measurementId: "G-R9L98QV387"
+  };
 
