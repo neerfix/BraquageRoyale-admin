@@ -17,11 +17,12 @@ const App = ({history}) => {
                 <Route exact path="/" component={Login}/>
                 <Route exact path="/dashboard" component={Index}/>
                 <Route exact path="/list/users" component={ListData}/>
-                <Route exact path="/list/categories" component={ListData}/>
-                <Route exact path="/list/offers" component={ListData}/>
-                <Route exact path="/list/users/:userId/reviews" component={ListData}/>
-                <Route exact path="/list/offers/:offerId/trades" component={ListData}/>
-                <Route exact path="/list/lists" component={ListData}/>
+                <Route exact path="/list/characters" component={ListData}/>
+                <Route exact path="/list/maps" component={ListData}/>
+                <Route exact path="/list/games" component={ListData}/>
+                <Route exact path="/list/objects" component={ListData}/>
+                <Route exact path="/list/gamemodes" component={ListData}/>
+                <Route exact path="/list/users/:userId/objects" component={ListData}/>
                 <Route exact path="/data/:do/:data/" component={FormData}/>
                 <Route exact path="/data/:do/:data/:id" component={FormData}/>
                 <Route exact path="/profile/settings/" component={ProfileSettings}/>
