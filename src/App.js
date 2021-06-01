@@ -21,7 +21,6 @@ const App = ({history}) => {
                 <Route exact path="/list/maps" component={ListData}/>
                 <Route exact path="/list/games" component={ListData}/>
                 <Route exact path="/list/objects" component={ListData}/>
-                <Route exact path="/list/gamemodes" component={ListData}/>
                 <Route exact path="/list/users/:userId/objects" component={ListData}/>
                 <Route exact path="/data/:do/:data/" component={FormData}/>
                 <Route exact path="/data/:do/:data/:id" component={FormData}/>
