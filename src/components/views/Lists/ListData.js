@@ -5,14 +5,11 @@ import {faUserPlus} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import routeAPI from "../../../tools/routeAPI";
 import Users from "../../containers/Users";
-import Offers from "../../containers/Offers";
-import Reviews from "../../containers/Reviews";
+import Maps from "../../containers/Maps";
 import Pagination from "react-pagination-bootstrap";
-import Categories from "./Categories";
 import Lists from "./Lists";
 import Loading from "../modules/Loading";
 import getToken from "../../../functions/getToken";
-import Trades from "../../containers/Trades";
 const token = getToken();
 
 export default class ListData extends Component {
@@ -67,11 +64,8 @@ export default class ListData extends Component {
     render() {
         const listData = {
             users: <Users data={this.state.data} startRange={this.state.startRange} endRange={this.state.endRange}/>,
-            trades: <Trades data={this.state.data} startRange={this.state.startRange} endRange={this.state.endRange}/>,
-            categories: <Categories data={this.state.data} startRange={this.state.startRange} endRange={this.state.endRange}/>,
-            reviews: <Reviews data={this.state.data} startRange={this.state.startRange} endRange={this.state.endRange}/>,
+            maps: <Maps data={this.state.data} startRange={this.state.startRange} endRange={this.state.endRange}/>,
             lists: <Lists data={this.state.data} startRange={this.state.startRange} endRange={this.state.endRange}/>,
-            offers: <Offers data={this.state.data} startRange={this.state.startRange} endRange={this.state.endRange}/>,
         };
 
         if(!listData[this.state.dataType]){
