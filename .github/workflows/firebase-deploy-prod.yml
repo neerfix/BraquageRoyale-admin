@@ -21,8 +21,6 @@ jobs:
         working-directory: ${{env.working-directory}}
       - name: install firebase
         run: npm i firebase-tools -g
-      - name: install vue cli
-        run: npm install -g @vue/cli
       - name: Build
         run: npm run build
       - name: deploy
