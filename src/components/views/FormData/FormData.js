@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Badge, Card} from "react-bootstrap";
 import Users from "./Users";
 import Maps from "./Maps";
+import Characters from "./Characters";
 import Lists from "./Lists";
 import getToken from "../../../functions/getToken";
 const token = getToken();
@@ -27,6 +28,7 @@ export default class FormData extends Component {
         const listData = {
             users: <Users id={this.state.id} action={this.state.action} dataType={this.state.dataType} showToasts={this.showToasts} delayToHide={this.delayToHide} showT={this.state.showToast}/>,
             maps: <Maps id={this.state.id} action={this.state.action} dataType={this.state.dataType} showToasts={this.showToasts} delayToHide={this.delayToHide} showT={this.state.showToast}/>,
+            characters: <Characters id={this.state.id} action={this.state.action} dataType={this.state.dataType} showToasts={this.showToasts} delayToHide={this.delayToHide} showT={this.state.showToast}/>,
             lists: <Lists id={this.state.id} action={this.state.action} dataType={this.state.dataType} showToasts={this.showToasts} delayToHide={this.delayToHide} showT={this.state.showToast}/>,
         };
 

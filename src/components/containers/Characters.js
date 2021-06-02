@@ -15,3 +15,4 @@ const mapStateToProps = state =>
 
 const Container = connect(mapStateToProps, mapDispatchToProps)(Characters);
 export default Container;
+
