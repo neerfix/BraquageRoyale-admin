@@ -1,8 +1,9 @@
-import React, {Component} from "react";
-import {Form} from "react-bootstrap";
-import routeAPI from "../../../tools/routeAPI";
-import FieldText from "./FieldText";
-import FooterForm from "./FooterForm";
+import {Component} from "react";
+// import React from "react";
+// import {Form} from "react-bootstrap";
+// import routeAPI from "../../../tools/routeAPI";
+// import FieldText from "./FieldText";
+// import FooterForm from "./FooterForm";
 // import getToken from "../../../functions/getToken";
 // const token = getToken();
 
