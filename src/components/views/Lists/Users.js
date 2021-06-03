@@ -25,9 +25,7 @@ class Index extends Component {
                     <tr>
                         <th>#</th>
                         <th>ID</th>
-                        <th>Reviews</th>
                         <th>Rank</th>
-                        <th>Avatar</th>
                         <th>Display Name</th>
                         <th>Email</th>
                         <th>Username</th>
@@ -39,26 +37,15 @@ class Index extends Component {
                             return (
                                 <tr key={index}>
                                     <td>{index + 1}</td>
-                                    <td>{user.id}</td>
+                                    <td>{user.body.id}</td>
+                                    <td>{user.body.player.rank}</td>
                                     <td>
-                                        <Link to={'/list/users/' + user.id + '/reviews'}>
-                                        <button className={"btn-success btn-sm"}> View reviews </button>
-                                        </Link>
+                                        {user.body.firstname} {user.body.lastname}
                                     </td>
-                                    <td>{user.rank}</td>
+                                    <td>{user.body.email}</td>
+                                    <td>{user.body.player.username}</td>
                                     <td>
-                                        {(user.avatar) === "" ? (
-                                            <Gravatar email={user.email} size={35} className="rounded-circle"/>) :
-                                            (<img src={user.avatar} width={"50px"} height={"50px"} alt={"avatar"}/>)
-                                        }
-                                    </td>
-                                    <td>
-                                        {user.firstname} {user.lastname}
-                                    </td>
-                                    <td>{user.email}</td>
-                                    <td>{user.username}</td>
-                                    <td>
-                                        <ButtonGroupAction data={this.props.data} id={user.id} type="users"/>
+                                        <ButtonGroupAction data={this.props.data} id={user.body.id} type="users"/>
                                     </td>
                                 </tr>
                             )

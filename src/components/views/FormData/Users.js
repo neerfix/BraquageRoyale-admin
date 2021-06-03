@@ -15,7 +15,16 @@ export default class Users extends Component {
             dataType: this.props.dataType,
             create: "POST",
             edit: "PATCH",
-            data: {"email": "", "password": "", "firstname": "", "lastname": "", "username": "",  "rank": ""},
+            data: {
+                "email": "", "firstname": "", "lastname": "",
+                "player": {
+                    "username": "",
+                    "rank": "",
+                },
+                "date": {
+                    "date_of_birth": "",
+                }
+            },
             deactivate: false,
         };
     }
@@ -31,11 +40,15 @@ export default class Users extends Component {
                             data: json,
                             apiLoaded: true,
                             email: json.email,
-                            password: json.password,
                             firstname: json.firstname,
                             lastname: json.lastname,
-                            username: json.username,
-                            rank: json.rank,
+                            player: {
+                                username: json.username,
+                                rank: json.rank,
+                            },
+                            date: {
+                                date_of_birth: json.date_of_birth,
+                            }
                         });
                     }
                 }).catch(e => {
@@ -61,11 +74,15 @@ export default class Users extends Component {
                 },
                 body: JSON.stringify({
                     email: this.state.email,
-                    password: this.state.password,
                     firstname: this.state.firstname,
                     lastname: this.state.lastname,
-                    username: this.state.username,
-                    rank: this.state.rank,
+                    player: {
+                        username: this.state.username,
+                        rank: this.state.rank,
+                    },
+                    date: {
+                        date_of_birth: this.state.date_of_birth,
+                    }
                 })
             })
             .then(r => {
@@ -102,22 +119,22 @@ export default class Users extends Component {
         return <Form onSubmit={this.handleSubmit}>
             <Form.Row>
                 <FieldText defaultValue={this.state.data.email} title={"Email"} name={"email"} id={"email"} placeholder={""} type={'email'} handleChange={this.handleChange}/>
-                <FieldText defaultValue={this.state.data.password} title={"Password"} name={"password"} id={"password"} placeholder={""} type={'password'} handleChange={this.handleChange}/>
+                <FieldText defaultValue={this.state.data.date.date_of_birth} title={"Date of birth"} name={"date_of_birth"} id={"date_of_birth"} placeholder={""} type={'text'} handleChange={this.handleChange}/>
             </Form.Row>
 
             <Form.Row>
                 <FieldText defaultValue={this.state.data.firstname} title={"First name"} name={"firstname"} id={"firstname"} placeholder={""} type={'text'} handleChange={this.handleChange}/>
                 <FieldText defaultValue={this.state.data.lastname} title={"Last name"} name={"lastname"} id={"lastname"} placeholder={""} type={'text'} handleChange={this.handleChange}/>
-                <FieldText defaultValue={this.state.data.username} title={"Username"} name={"username"} id={"username"} placeholder={""} type={'text'} handleChange={this.handleChange}/>
+                <FieldText defaultValue={this.state.data.player.username} title={"Username"} name={"username"} id={"username"} placeholder={""} type={'text'} handleChange={this.handleChange}/>
             </Form.Row>
 
 
 
             <Form.Row>
                 <select className={"form-control"}   name={"rank"}  onChange={this.handleChange}>
+                    <option value={"newbie"}> Newbie</option>
                     <option value={"admin"}> Admin</option>
                     <option value={"super_admin"}> Super-Admin</option>
-                    <option value={"trader"}> Trader</option>
                 </select>
             </Form.Row>
 

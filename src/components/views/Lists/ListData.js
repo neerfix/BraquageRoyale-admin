@@ -6,6 +6,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import routeAPI from "../../../tools/routeAPI";
 import Users from "../../containers/Users";
 import Maps from "../../containers/Maps";
+import Characters from "../../containers/Characters";
 import Pagination from "react-pagination-bootstrap";
 import Lists from "./Lists";
 import Loading from "../modules/Loading";
@@ -65,6 +66,7 @@ export default class ListData extends Component {
         const listData = {
             users: <Users data={this.state.data} startRange={this.state.startRange} endRange={this.state.endRange}/>,
             maps: <Maps data={this.state.data} startRange={this.state.startRange} endRange={this.state.endRange}/>,
+            characters: <Characters data={this.state.data} startRange={this.state.startRange} endRange={this.state.endRange}/>,
             lists: <Lists data={this.state.data} startRange={this.state.startRange} endRange={this.state.endRange}/>,
         };
 

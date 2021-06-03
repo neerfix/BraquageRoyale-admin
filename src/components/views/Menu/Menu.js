@@ -27,6 +27,7 @@ export default class Menu extends Component {
                         <h3>Data</h3>
                         <ListGroupItem to={'/list/users'} dataType={"Users"} icon={faUser}/>
                         <ListGroupItem to={'/list/maps'} dataType={"Maps"} icon={faMapPin}/>
+                        <ListGroupItem to={'/list/characters'} dataType={"Characters"} icon={faMapPin}/>
                         <h3>Moderation</h3>
                         <ListGroupItem to={'/alert'} dataType={"Reporting"} icon={faFlag}/>
                         <ListGroupItem to={'/alert'} dataType={"Ban"} icon={faFlag}/>

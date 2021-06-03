@@ -19,7 +19,7 @@ export default class Header extends Component {
         if (this.props.location.pathname !== '/') {
             return (
                 <Navbar fixed="top">
-                    <Navbar.Brand href="/dashboard" className={"color-danger"}> <img src={logo} alt={"logo"} width={"60px"}/>  </Navbar.Brand>
+                    <Navbar.Brand href="/dashboard" className={"color-danger"}> <img src={logo} alt={"logo"} width={"30px"}/>  </Navbar.Brand>
                     <Nav className="mr-auto">
                         <Nav.Link to="/dashboard">Dashboard</Nav.Link>
                         <Nav.Link to="/users">Users</Nav.Link>
